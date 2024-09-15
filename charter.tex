@@ -5,7 +5,7 @@
 
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Open Drone} 
+\titulo{Dise\~no e implementaci\'on de un prototipo de dron de c\'odigo abierto} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 \posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -18,7 +18,7 @@
 \autor{Ing. Daniel David Albarracin}
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Ing. Juan Manuel Cruz - A Definir}
+\director{Ing. Juan Manuel Cruz}
 \pertenenciaDirector{FIUBA} 
 \codirector{}
 \pertenenciaCoDirector{}
@@ -28,9 +28,9 @@
 \cliente{Comite evaluador}
 \empresaCliente{CESE - FIUBA}
  
-\fechaINICIO{20 de Agosto de 2024}		%Fecha de inicio de la cursada de GdP \fechaInicioName
-\fechaFINALPlan{8 de Octubre de 2024} 	%Fecha de final de cursada de GdP
-\fechaFINALTrabajo{31 de Marzo de 2025}			%Fecha de defensa pública del trabajo final
+\fechaINICIO{20 de agosto de 2024}				%Fecha de inicio de la cursada de GdP \fechaInicioName
+\fechaFINALPlan{8 de octubre de 2024} 			%Fecha de final de cursada de GdP
+\fechaFINALTrabajo{31 de junio de 2025}			%Fecha de defensa pública del trabajo final
 
 
 \begin{document}
@@ -59,8 +59,10 @@
 		\rowcolor[HTML]{C0C0C0}
 		Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha            \\ \hline
 		0        & Creación del documento                                                          & \fechaInicioName \\ \hline
-		%1      & Se completa hasta el punto 5 inclusive                & {día} de {mes} de 202X \\ \hline
-		%2      & Se completa hasta el punto 9 inclusive
+		1        & Se completa hasta el punto 5 inclusive                & {3} de {septiembre} de 2024 \\ \hline
+		1.1      & Correcciones hasta el punto 5				 		 & {10} de {septiembre} de 2024 \\ \hline
+		2        & Correcciones hasta el punto 5. 
+				   Se completa hasta el punto 9 inclusive				 & {15} de {septiembre} de 2024 \\ \hline
 		%		  Se puede agregar algo más \newline
 		%		  En distintas líneas \newline
 		%		  Así                                                    & {día} de {mes} de 202X \\ \hline
@@ -84,7 +86,7 @@
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un prototipo experimental de un drone de bajo coste. El trabajo tendrá un presupuesto preliminar estimado de 640 horas y un costo estimado de \$ 300.000, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un prototipo experimental de un drone de bajo coste. El trabajo tendrá un presupuesto preliminar estimado de 664 horas y un costo estimado de \$ 330.000, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -123,7 +125,6 @@ Se adjunta a esta acta la planificación inicial.
 	En la figura \ref{fig:diagBloques} se presenta el diagrama en bloques del sistema. 
 	
 	Se observa que el FC es el punto de interconexión entre las entradas (IMU, GPS, UltraSonido, barómetro y Rx) y las salidas (Brushless Engine y Telemetría).
-.  
 
 	\begin{figure}[htpb]
 		\centering
@@ -148,27 +149,27 @@ Se adjunta a esta acta la planificación inicial.
 			\hline
 			\rowcolor[HTML]{C0C0C0}
 			Rol           & Nombre y Apellido & Organización       & Puesto                     \\ \hline
-			Auspiciante   & -                 & -                  & -                          \\ \hline
-			Cliente       & \clientename      & \empclientename    & -                           \\ \hline
-			Impulsor      & -                 & -                  & -                          \\ \hline
+			Cliente       & \clientename      & \empclientename    & Jurado                     \\ \hline
 			Responsable   & \authorname       & FIUBA              & Alumno                     \\ \hline
-			Colaboradores & -                 & -                  & -                           \\ \hline
 			Orientador    & \supname          & \pertesupname      & Director del Trabajo Final \\ \hline
-			Equipo        & - \newline
-			-      		  &                   &                                              \\ \hline
-			Opositores    &                   &                    &                            \\ \hline
 			Usuario final & Aficionados       & Publico en general &                            \\ \hline
 		\end{tabularx}
 	\end{table}
 
-
+	\begin{itemize}
+		\item Cliente: a definir.
+		\item Director: el Ing. Juan Manual Cruz es un referente en el area de desarrollo de software implementando soluciones con sistemas operativos de tiempo real. Ser\'a quien brindar\'a su experiencia y visi\'on cr\'itica en la modularizacion e interconexi\'on del software.  
+		\item Usuario final: todo aficionado a la electr\'onica, el desarrollo de software y en espec\'ifico, el campo de uso de drones que desee hacer uso del proyecto. 
+		
+	 \end{itemize}
+		
 
 
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
 
-	Disponibilizar de forma libre la documentacion, codigo y detalles de implementacion y explicacion teorica de un drone funcional basado en el microcontrolador STM32F4 y perifericos asociados. 
+	Disponibilizar de forma libre la documentaci\'on, c\'odigo y detalles de implementaci\'on y explicaci\'on te\'orica de un dron funcional basado en el microcontrolador STM32F4 y perif\'ericos asociados. 
 
 
 \section{4. Alcance del proyecto}
@@ -176,47 +177,47 @@ Se adjunta a esta acta la planificación inicial.
 
 
 
-	A continuacion se listan los alcances del proyecto en lo concerniente al desarrollo de software, hardware y documentacion. 
+	A continuaci\'on se listan los alcances del proyecto en lo concerniente al desarrollo de software, hardware y documentaci\'on. 
 
 	El proyecto incluye:
 	\begin{itemize}
 		\item Software.
 		 	\begin{itemize}
-			      \item Desarrollo de firmware de motor brushless
-			      \item Desarrollo de firmware de GPS
-			      \item Desarrollo de firmware de tarjeta SD
-			      \item Desarrollo de firmware de IMU 
-			      \item Desarrollo de firmware de ultrasonido
-			      \item Desarrollo de firmware de barometro 
-			      \item Desarrollo de firmware de control de velocidad
-			      \item Desarrollo de firmware de control de potencia
-			      \item Desarrollo de firmware de Rx RF
-			      \item Desarrollo integral sobre sistema de tiempo real (FreeRTOS) 
+			      \item Desarrollo del firmware para el control del motor sin escobillas trif\'asico.
+			      \item Desarrollo del firmware para el m\'odulo del sistemas de posicionamiento global (GPS).
+			      \item Desarrollo del firmware para el control de la tarjeta SD.
+			      \item Desarrollo del firmware para el control de la unidad de medici\'on inercial (IMU). 
+			      \item Desarrollo del firmware para el control del sensor de de ultrasonido.
+			      \item Desarrollo del firmware para el control del sensor de presi\'on. 
+			      \item Desarrollo del firmware para el control del m\'odulo de control de velocidad.
+			      \item Desarrollo del firmware para el control del m\'odulo de distribuci\'on de potencia.
+			      \item Desarrollo del firmware para el control del m\'odulo de transmisi\'on de radio frecuencia (Rx RF).
+			      \item Desarrollo integral sobre un sistema de tiempo real (FreeRTOS) sobre la controladora de vuelo. 
 		      \end{itemize}
 		\item Hardware.
 		      \begin{itemize}
-			      \item Un motor brushless (a definir)
-			      \item Un modulo GPS - (U-blox / NEO-6m)
-			      \item Una interface con tarjeta SD (Generic - a definir)
-			      \item Un sensor de ultrasonido (Generic - a definir)
-			      \item Un modulo de medicion inercial (IMU / MPU9250)
-			      \item Un modulo de medicion de presion (BMP280)
-			      \item Un receptor de radio frecuencia Rx RF (FLYSKY/ FS-IA6R - A definir) 
-			      \item Un transmisor de radio frecuencia Tx RF (FLYSKY / FS-I6x - A definir)
-				  \item	Desarrollo prototipo de PCB para control de velocidad
-			      \item Desarrollo prototipo de PCB para control de potencia
-			      \item Una bateria LiPo - A definir
+			      \item Un motor sin escobillas trif\'asico (a definir).
+			      \item Un m\'odulo de posicionamiento global modelo GPS-NEO-6m del fabricante U-blox.
+			      \item Un m\'odulo interfaz con tarjeta SD de tipo gen\'erico a definir.
+			      \item Un sensor para la detecci\'on de ondas de ultrasonido de tipo gen\'erico a definir.
+			      \item Un unidad de medici\'on inercial modelo MPU9250 del fabricante a definir
+			      \item Un sensor de medici\'on de presi\'on bar\'ometrica modelo BMP280 del fabricante Bosch.
+			      \item Un m\'odulo receptor de radio frecuencia modelo FS-IA6R del fabricante FLYSKY (a definir). 
+			      \item Un m\'odulo transmisor de radio frecuencia modelo FS-I6x del fabricante FLYSKY (a definir).
+				  \item	Desarrollo de un circuito impreso prototipo para el m\'odulo control electr\'onico de de velocidad.
+			      \item Desarrollo de un circuito impreso prototipo para el m\'odulo de control de distribuci\'on de potencia.
+			      \item Una bateria de tipo Litio Polimero (LiPo)(cantidad de celdas, amperaje y voltaje a definir).
 		      \end{itemize}
-		\item Documentacion.
+		\item Documentaci\'on.
 		      \begin{itemize}
-			      \item Documentacion teorica y de implementacion de GPS
-			      \item Documentacion teorica y de implementacion de motor brushless y modulo de control de velocidad
-			      \item Documentacion teorica y de implementacion de medidor inercial
-			      \item Documentacion teorica y de implementacion de barometro
-			      \item Documentacion teorica y de implementacion de Tx RF
-			      \item Esquematicos de desarrollo de PCB para control de velocidad
-			      \item Esquematicos de desarrollo de PCB para control de potencia
-			      \item Documentacion de Integracion
+			      \item Documentaci\'on te\'orica y de implementaci\'on sobre el m\'odulo de posicionamiento global.
+			      \item Documentaci\'on te\'orica y de implementaci\'on sobre el control del motor sin escobillas trif\'asico y sobre el modulo de control de velocidad.
+			      \item Documentaci\'on te\'orica y de implementaci\'on sobre la unidad de medici\'on inercial.
+			      \item Documentaci\'on te\'orica y de implementaci\'on sobre el control de sensor de presi\'on barom\'etrica.
+			      \item Documentaci\'on te\'orica y de implementaci\'on sobre el m\'odulo de transimsi\'on de radio frecuencia.
+			      \item Esquem\'aticos del desarrollo de PCB para control electr\'onico de velocidad.
+			      \item Esquem\'aticos del desarrollo de PCB para control de distribuci\'on de potencia.
+			      \item Documentaci\'on de integraci\'on.
 		      \end{itemize}
 
 	\end{itemize}
@@ -225,23 +226,23 @@ Se adjunta a esta acta la planificación inicial.
 	\begin{itemize}
 		\item General.
 		    \begin{itemize}
-			    \item Chasis mecanico de soporte
-			    \item Pruebas en vuelo 
-			    \item Transimision de video
-			    \item No transmitira datos al receptor
-			    \item Compatibilidad electromagnetica 
+			    \item Chasis mec\'anico de soporte.
+			    \item Pruebas en vuelo. 
+			    \item Transimisi\'on de video.
+			    \item No transmitir\'a datos al receptor.
+			    \item No se realizar\'an pruebas de compatibilidad electromagn\'etica. 
 		    \end{itemize}
 		\item Software.
 		 	\begin{itemize}
-				\item Compatibilidad con diferentes tipos de modulos y fabricantes
-			    \item Compatibilidad con protocolos no desarrollados en el proyecto
-			    \item Portacion a otro sistema de tiempo real
-			    \item Portacion a otro microcontrolador
+				\item Compatibilidad con diferentes tipos de m\'odulos y fabricantes.
+			    \item Compatibilidad con protocolos no desarrollados en el proyecto.
+			    \item Portaci\'on a otro sistema de tiempo real.
+			    \item Portaci\'on a otro microcontrolador.
 		    \end{itemize}
 		\item Hardware.
 		 	\begin{itemize}
-				\item Desarrollo comercial de PCB para el controlador de velocidad 
-		    	\item Desarrollo comercial de PCB para el controlador de potencia
+				\item Desarrollo comercial de circuito impreso para el m\'odulo de control electr\'onico de velocidad. 
+		    	\item Desarrollo comercial de circuito impreso para el m\'odulo de distribuci\'on de potencia.
 		    \end{itemize}		
 	\end{itemize}
 
@@ -255,12 +256,12 @@ Se adjunta a esta acta la planificación inicial.
 	Para el desarrollo del presente proyecto se realizan los siguientes supuestos:
 
 	\begin{itemize}
-		\item Realizacion de analisis de caracteristicas y alternativas de componentes
-		\item Los modulos y elementos electronicos seran adquiridos en el mercado local.
-		\item Se contara con la orientacion tecnica de un director para el desarrollo de software
-		\item se contara con la orientacion tecnica de un colaborador para el desarrollo de hardware
-		\item Se dispondra de los medios economicos para la adquisicion de compoenentes
-		\item Se dispondra de una carga horaria media de 20 hs semanales 
+		\item Realizaci\'on de an\'alisis de caracter\'isticas y alternativas de componentes.
+		\item Los m\'odulos y elementos electr\'onicos ser\'an adquiridos en el mercado local.
+		\item Se contar\'a con la orientaci\'on t\'ecnica de un director para el desarrollo de los distintos componentes del software.
+		\item Se contar\'a con la orientaci\'on t\'ecnica de un colaborador para el desarrollo de hardware (a definir).
+		\item Se dispondr\'a de los medios econ\'omicos para la adquisici\'on de los componentes y m\'odulos electr\'onicos. 
+		\item Se dispondr\'a de una carga horaria media de dedicacion exlusiva al desarrollo del proyecto de 16 h semanales. 
 	\end{itemize}
 
 
@@ -269,110 +270,158 @@ Se adjunta a esta acta la planificación inicial.
 \section{6. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red}
-	Los requerimientos deben enumerarse y de ser posible estar agrupados por afinidad, por ejemplo:
+
+	Los requerimientos del proyecto se listan a continuaci\'on.
 
 	\begin{enumerate}
 		\item Requerimientos funcionales:
 		      \begin{enumerate}
-			      \item El sistema debe...
-			      \item Tal componente debe...
-			      \item El usuario debe poder...
+			      \item El sistema debe operar integramente demostrando la funcionalidad de un dron prototipo. 
+			      \item Tanto el transmisor como el receptor de radio frecuencia deben operar en una banda de frecuencia habilitada para uso ciudadano.
+			      \item El usuario final debe poder replicar el proyecto siguiendo la documentacion publicada el repositorio del proyecto.  
 		      \end{enumerate}
-		\item Requerimientos de documentación:
+		\item Requerimientos de software:
+			  \begin{enumerate}
+			      \item El firmware desarrollado para cada componente de hardware del proyecto brindar\'a una api para su
+utilizaci\'on.
+				  \item El sistema operativo debe ser de tiempo real.			      
+			      \item El sistema operativo debe comandar la interoperabilidad con los diferentes componentes de hardware.
+			      \item El sistema operativo debe tener un esquema de prioridades y manejo de interrupciones.
+		      \end{enumerate}
+		\item Requerimiento de testing:
+			 \begin{enumerate}
+			      \item El firmware para el control de cada componente de hardware ser\'a testeado acorde a la api desarrollada para su operabilidad.
+		     \end{enumerate}
+		\item Requerimiento de hardware:
+			 \begin{enumerate}
+			      \item El microcontrolador debe soportar un sistema operativo en tiempo real.
+			      \item El m\'odulo para el control electr\'onico de velocidad debe poder operar en los rangos de potencia exigido por el motor sin escobillas trif\'asico.
+			      \item El m\'odulo para la distribuci\'on de potencia debe soportar picos de corriente a necesidad y al mismo tiempo protecci\'on de los componentes conectados.
+			      \item El m\'odulo controlador de vuelo desarrollado sobre la placa de desarrollo Nucleo SMT32F4 debe brindar interoperabilidad con los siguientes elementos de hardware:
+			      \begin{enumerate}
+			      	\item Un motor sin escobillas trif\'asico.
+			      	\item Un m\'odulo de posicionamiento global.
+			      	\item Un m\'odulo sensor de ultrasonido.
+  		      	    \item Un m\'odulo sensor de presi\'on barom\'etrica.
+  		      	    \item Una unidad de medici\'on inercial.
+  		      	    \item Un m\'odulo transmisor de radio frecuencia.
+  		      	    \item Un m\'odulo para resguardo en tarjeta SD.
+  		      	    \item Un m\'odulo para control de velocidad del motor.
+  		      	    \item Un m\'odulo para el control de potencia del sistema. 
+			      \end{enumerate}
+		     \end{enumerate}
+		\item Requerimientos de documentaci\'on:
 		      \begin{enumerate}
-			      \item Requerimiento 1.
-			      \item Requerimiento 2 (prioridad menor)
+				  \item El c\'odigo fuente deber\'a estar publicado en un repositorio de \textit{Github}.			      
+			      \item El c\'odigo fuente deber\'a estar documentado.
+			      \item La documentaci\'on tanto del c\'odigo fuente como los destalles de implementaci\'on ser\'a subido al repositorio del proyecto.
+			      \item Los esquem\'aticos de los circuitos impresos ser\'an subidos al repositorio del proyecto.
 		      \end{enumerate}
-		\item Requerimiento de testing...
-		\item Requerimientos de la interfaz...
-		\item Requerimientos interoperabilidad...
-		\item etc...
 	\end{enumerate}
 
-	Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-	Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales.
-
-	\textbf{¡¡¡No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!}
-
-	Y al escribirlos seguir las siguientes reglas:
-	\begin{itemize}
-		\item Ser breve y conciso (nadie lee cosas largas).
-		\item Ser específico: no dejar lugar a confusiones.
-		\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-	\end{itemize}
-
-\end{consigna}
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-	Descripción: en esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
-
-	Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia.
-
-	El formato propuesto es:
+	A continuaci\'on se listan algunas historias de usuarios relacionadas a la necesidades del usuario final:
+	
 	\begin{enumerate}
-		\item ``Como [rol] quiero [tal cosa] para [tal otra cosa]."
+		\item ``Como aficionado quiero disponer de la informaci\'on recolectada por el dron en una memoria SD para tener trazabilidad de su funcionamiento."
+		
+		\textit{Story points}: 13 (complejidad: 3, dificultad: 3, incertidumbre: 3)
+		
+		\item ``Como aficionado quiero disponer de la documentac\'n necesaria para poder replicar el proyecto."
 
-		      \textit{Story points}: 8 (complejidad: 3, dificultad: 2, incertidumbre: 3)
+		\textit{Story points}: 8 (complejidad: 3, dificultad: 3, incertidumbre: 2)
+		
+		\item ``Como aficionado quiero disponer del c\'odigo fuente utilizado en el desarrollo del proyecto para poder 		modificarlo."
+
+		\textit{Story points}: 5 (complejidad: 1, dificultad: 3, incertidumbre: 1)
+		
+		\item ``Como aficionado quiero disponer de los esquem\'aticos del dise\~no de los circuitos impresos para poder adaptarlos a mis necesidades."
+
+		\textit{Story points}: 5 (complejidad: 3, dificultad: 1, incertidumbre: 1)
+		
+		\item ``Como aficionado quiero que el dron tenda detecci\'on de colisiones para evitar que se da\~ne."
+
+		\textit{Story points}: 3 (complejidad: 1, dificultad: 1, incertidumbre: 1)
+				
 	\end{enumerate}
-\end{consigna}
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-	Los entregables del proyecto son (ejemplo):
+	Los entregables del proyecto son:
 
 	\begin{itemize}
 		\item Manual de usuario.
+		\item Manual de desarrollo de firmware. 
 		\item Diagrama de circuitos esquemáticos.
 		\item Código fuente del firmware.
 		\item Diagrama de instalación.
 		\item Memoria del trabajo final.
-		\item etc...
 	\end{itemize}
-\end{consigna}
 
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
 
-\begin{consigna}{red}
-	El WBS debe tener relación directa o indirecta con los requerimientos.  Son todas las actividades que se harán en el proyecto para dar cumplimiento a los requerimientos. Se recomienda mostrar el WBS mediante una lista indexada:
-
 	\begin{enumerate}
-		\item Grupo de tareas 1 (suma h)
+		\item Gesti\'on del proyecto. (35 h)
 		      \begin{enumerate}
-			      \item Tarea 1 (tantas h)
-			      \item Tarea 2 (tantas h)
-			      \item Tarea 3 (tantas h)
+			      \item Planificaci\'on del proyecto. (10 h)
+			      \item Documentar la planificaci\'on y gesti\'on del proyecto. (10 h)
+			      \item Comunicar los avances del proyecto. (10 h)
+			      \item Revisi\'on y control de los avances del proyecto. (5 h)
 		      \end{enumerate}
-		\item Grupo de tareas 2 (suma h)
+		\item Investigaci\'on sobre drones. (40 h)
+			  \begin{enumerate}
+			  	  \item Investigaci\'on y selecci\'on de componentes. (10 h)
+			  	  \item Investigaci\'on sobre sistemas de posicionamiento global. (10 h)
+			  	  \item Investigaci\'on sobre motores trif\'asicos. (10 h)
+			  	  \item Investigaci\'on sobre unidad de medici\'on inercial (10 h) 
+			  \end{enumerate}
+		\item Desarrollo de software. (240 h)
 		      \begin{enumerate}
-			      \item Tarea 1 (tantas h)
-			      \item Tarea 2 (tantas h)
-			      \item Tarea 3 (tantas h)
+			      \item Desarrollo del firmware para el control del m\'odulo de posicionamiento global. (30 h)
+			      \item Desarrollo del firmware para el control del sensor de pres\'on bar\'ometrica. (30 h)
+			      \item Desarrollo del firmware para el control de la unidad de medici\'on inercial. (30 h)
+			      \item Desarrollo del firmware para el control del sensor de ultrasonido. (30 h)
+			      \item Desarrollo del firmware para el control del m\'odulo de recepci\'on de radiofrecuencia. (30 h)
+			      \item Desarrollo del firmware para el control del m\'odulo de resguardo en tarjeta SD. (30 h)
+			      \item Desarrollo del firmware para el control del m\'odulo de control electr\'onico de velocidad. (30 h)
+			      \item Desarrollo del firmware para el control del m\'odulo de distribuci\'on de potencia. (30 h)
 		      \end{enumerate}
-		\item Grupo de tareas 3 (suma h)
+		\item Desarrollo de hardware (90 h)
 		      \begin{enumerate}
-			      \item Tarea 1 (tantas h)
-			      \item Tarea 2 (tantas h)
-			      \item Tarea 3 (tantas h)
-			      \item Tarea 4 (tantas h)
-			      \item Tarea 5 (tantas h)
+				  \item	Desarrollo de un circuito impreso prototipo para el m\'odulo control electr\'onico de de velocidad. (45 h)
+			      \item Desarrollo de un circuito impreso prototipo para el m\'odulo de control de distribuci\'on de potencia. (45 h)
+		      \end{enumerate}
+		\item Pruebas funcionales. (60 h)
+		      \begin{enumerate}
+			      \item Pruebas de testeo sobre los firmware desarrollados. (20 h)
+			      \item Pruebas de testeo sobre el hardware desarrollado. (20 h)
+			      \item Pruebas integrales. (20 h)
+		      \end{enumerate}
+		\item Documentaci\'on. (105 h)
+		      \begin{enumerate}
+			      \item Redacci\'on del documento sobre la implementaci\'on del m\'odulo de posicionamiento global. (15 h)
+			      \item Redacci\'on del documento sobre la implementaci\'on del m\'odulo de detecci\'on por ultrasonido. (15 h)
+			      \item Redacci\'on del documento sobre la implementaci\'on del m\'odulo del sensor de presi\'on barom\'etrica. (15 h)
+			      \item Redacci\'on del documento sobre la implementaci\'on del m\'odulo de medici\'n inercial. (15 h)
+			      \item Redacci\'on del documento sobre la implementaci\'on del m\'odulo de control electr\'onico de velocidad. (15 h)
+			      \item Redacci\'on del documento sobre la implementaci\'on del m\'odulo distribuci\'on de potencia. (15 h)
+			      \item Redacci\'on del documento sobre la implementaci\'on del m\'odulo de resguardo de telemetr\'ia. (15 h)
+		      \end{enumerate}
+		\item Cierre del proyecto. (94 h)
+		      \begin{enumerate}
+			      \item Gesti\'on del proceso de cierre del proyecto. (10 h)
+			      \item Elaboraci\'on del informe final. (60 h)
+			      \item Elaboraci\'on de la presentaci\'on. (20 h)
+			      \item Presentaci\'on del informe final. (4 h)
 		      \end{enumerate}
 	\end{enumerate}
 
-	Cantidad total de horas: tantas.
-
-	\textbf{¡Importante!:} la unidad de horas es h y va separada por espacio del número. Es incorrecto escribir ``23hs".
-
-	\textbf{Se recomienda que no haya ninguna tarea que lleve más de 40 h.} De ser así se recomienda dividirla en tareas de menor duración.
-
-\end{consigna}
+	Cantidad total de horas: 664.
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
